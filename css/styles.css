@@ -1,10 +1,63 @@
-/* css/styles.css */
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --font-primary: 'Roboto', sans-serif;
-    --transition-base: all 0.3s ease;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    font-family: var(--font-primary);
+    font-family: Georgia, serif;
+}
+
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url('../imagenes/Mooala_Organic_Almond_Milk.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-content {
+    max-width: 650px;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.organic {
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.1;
+}
+
+
+.hero-description {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    max-width: 620px;
+}
+
+.btn-shop {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.8rem 1.8rem;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-shop:hover {
+    background-color: #f0f0f0;
 }
