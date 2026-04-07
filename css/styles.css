@@ -60,4 +60,164 @@ body {
 
 .btn-shop:hover {
     background-color: #f0f0f0;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --font-primary: "DM Sans", sans-serif;
+    --transition-base: all 0.3s ease; 
+} 
+
+body { 
+font-family: var(--font-primary); 
+} 
+
+.top-shadow {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    box-shadow: 0 4px 200px 30px rgb(0, 0, 0);
+    pointer-events: none;
+    z-index: 1;
+    animation: shadow0 linear both 2s;
+    animation-timeline: scroll();
+    animation-range: 0px 40px;
+}
+
+@keyframes shadow0 {
+    to {
+        opacity: 0;
+    }
+}
+
+.logo{
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.nav-container {
+      justify-content: space-between; 
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 160px;
+    animation: nav-scroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 40px;
+    position: fixed;
+    width: 100%;
+    transition: var(--transition-base);
+    background-color: transparent;
+    z-index: 2;
+}
+
+@keyframes nav-scroll {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: white;
+    }
+}
+
+.nav-container > ul {
+    position: relative;
+    right: 178px;
+    
+} 
+
+.nav-container > ul > li{
+    list-style: none;
+    display: inline;
+    margin-right: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.nav-container > ul > li:hover {
+    border-bottom: 2px solid;
+    animation: nav-scroll-border-color linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 40px;
+}
+
+@keyframes nav-scroll-border-color {
+    from {
+        border-bottom-color: white;
+    }
+    to {
+        border-bottom-color: black;
+    }
+}
+
+.nav-container > ul > li > a{
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 19px;
+    font-weight: 300;
+    animation: nav-scroll-color linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 40px;
+}
+
+@keyframes nav-scroll-color {
+    from {
+        color: white;
+    }
+    to {
+        color: black;
+    }
+}
+
+.nav-container-right{
+    display: flex;
+    align-items: center;
+}
+
+.nav-container-right > a > img{
+    width: 20px;
+    margin: 20px;
+    filter: invert(1);
+    animation: nav-scroll-color-img linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 40px;
+}
+
+@keyframes nav-scroll-color-img {
+    from {
+        filter: invert(1);
+    }
+
+    to {
+        filter: invert(0);
+    }
+}
+
+.nav-container-right > a:nth-child(2) > img {
+    width: 25px;
+    margin: 20px;
+}
+
+.nav-container-right > a:nth-child(3) > img {
+    width: 23px;
+    margin: 20px;
+}
+
+
+.nav-container-right{
+    margin-right: 20px;
+}
+
+footer h1{
+    position: relative;
+    color: white;
+    top: 1000px
 }
